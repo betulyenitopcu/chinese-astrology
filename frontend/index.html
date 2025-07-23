@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Çin Astrolojisi Hesaplama</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+      min-height: 100vh;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+    .container {
+      max-width: 500px;
+      margin: 50px auto;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      padding: 32px 24px 24px 24px;
+    }
+    h2 {
+      text-align: center;
+      color: #6c47a6;
+      margin-bottom: 32px;
+    }
+    #astro-form button {
+      background: #6c47a6;
+      color: #fff;
+      border-radius: 8px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin-top: 10px;
+    }
+    #result {
+      margin-top: 32px;
+    }
+    .result-card {
+      background: #f6f2ff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(108,71,166,0.08);
+      padding: 20px 18px;
+      margin-top: 10px;
+      font-size: 1.08em;
+      line-height: 1.6;
+    }
+    .animal-emoji {
+      font-size: 2.2em;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+    @media (max-width: 600px) {
+      .container { padding: 16px 4px; }
+      h2 { font-size: 1.3em; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>🌟 Çin Astrolojisi Hesaplama 🌟</h2>
+    <form id="astro-form">
+      <label for="day">Doğum Günü:</label>
+      <input type="number" id="day" name="day" min="1" max="31" required>
+      <label for="month">Doğum Ayı:</label>
+      <input type="number" id="month" name="month" min="1" max="12" required>
+      <label for="year">Doğum Yılı:</label>
+      <input type="number" id="year" name="year" min="1900" max="2100" required>
+      <button type="submit">Hesapla</button>
+    </form>
+    <div id="result"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
