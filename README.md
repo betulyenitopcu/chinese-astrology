@@ -30,12 +30,19 @@ Bu proje, doğum tarihinize göre Çin astrolojisine ait hayvan, element, Yin/Ya
 - [Docker](https://www.docker.com/) ve [Docker Compose](https://docs.docker.com/compose/) yüklü olmalı
 - Google Gemini API anahtarınız olmalı ([API anahtarı alın](https://aistudio.google.com/app/apikey))
 
-### 2. Ortam Değişkenleri
-Backend için bir `.env` dosyası oluşturun ve aşağıdaki satırı ekleyin:
+### 2. Ortam Değişkenleri (.env)
+**Dikkat:** `.env` dosyanız gizli kalmalı ve asla GitHub'a yüklenmemelidir!
 
+Backend klasöründe bir `.env` dosyası oluşturun ve aşağıdaki satırları ekleyin:
+
+```env
+GEMINI_API_KEY=buraya_kendi_gemini_api_anahtarınızı_yazın
+PORT=3001
 ```
-GEMINI_API_KEY=your_gemini_api_key
-```
+
+> Örnek dosya yolu: `backend/.env`
+
+---
 
 ### 3. Docker ile Başlatma
 Proje kök dizininde aşağıdaki komutu çalıştırın:
@@ -104,6 +111,7 @@ chinese-astrology/
     Dockerfile        # Backend Docker
     docker-compose.yml
     package.json
+    .env              # (GİZLİ, paylaşmayın!)
   frontend/
     index.html        # Ana arayüz
     script.js         # Tüm JS mantığı
@@ -114,10 +122,9 @@ chinese-astrology/
 
 ## Notlar
 - Gemini API anahtarı olmadan detaylı analiz alınamaz.
+- `.env` dosyanızı asla paylaşmayın veya repoya eklemeyin.
 - Frontend ve backend ayrı portlarda çalışır, CORS açıktır.
 - Mobil ve masaüstü uyumludur.
 
 ---
 
-## Lisans
-MIT 
