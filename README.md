@@ -31,7 +31,6 @@ Bu proje, doğum tarihinize göre Çin astrolojisine ait hayvan, element, Yin/Ya
 - Google Gemini API anahtarınız olmalı ([API anahtarı alın](https://aistudio.google.com/app/apikey))
 
 ### 2. Ortam Değişkenleri (.env)
-**Dikkat:** `.env` dosyanız gizli kalmalı ve asla GitHub'a yüklenmemelidir!
 
 Backend klasöründe bir `.env` dosyası oluşturun ve aşağıdaki satırları ekleyin:
 
